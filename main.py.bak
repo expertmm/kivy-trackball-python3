@@ -58,7 +58,7 @@ class Renderer(Widget):
         self.rotx = Rotate(0, 0, 1, 0)
         self.roty = Rotate(0, 1, 0, 0)
         #self.scale = Scale(0.6)
-        m = list(self.scene.objects.values())[0]
+        m = self.scene.objects.values()[0]
         UpdateNormalMatrix()
         self.mesh = Mesh(
             vertices=m.vertices,
@@ -129,7 +129,7 @@ class Renderer(Widget):
 
                 if scale:
                     self.camera_translate[2] += scale
-                    print(scale, self.camera_translate)
+                    print scale, self.camera_translate
             self.update_glsl()
 
 

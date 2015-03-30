@@ -2,9 +2,9 @@ class MeshData(object):
     def __init__(self, **kwargs):
         self.name = kwargs.get("name")
         self.vertex_format = [
-            (b'v_pos', 3, 'float'),
-            (b'v_normal', 3, 'float'),
-            (b'v_tc0', 2, 'float')]
+            ('v_pos', 3, 'float'),
+            ('v_normal', 3, 'float'),
+            ('v_tc0', 2, 'float')]
         self.vertices = []
         self.indices = []
 
